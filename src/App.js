@@ -2,11 +2,15 @@ import './App.css';
 import PropTypes from 'prop-types';
 
 function Square({ value }) {
-  return <button className="square">{value}</button>;
+  function handleClick() {
+    console.log('handleClick: ' + value);
+  }
+
+  return <button className="square" onClick={handleClick}>{value}</button>;
 }
 
-Square.propTypes = { 
-  value: PropTypes.string
+Square.propTypes = {
+  value: PropTypes.string.isRequired
 }
 
 export default function Board() {
