@@ -16,6 +16,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
     return (
         <>
+            <div>learn react</div>
             <div className="status">{status}</div>
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
