@@ -4,6 +4,7 @@ import { calculateWinner } from './Utils';
 function Board({ xIsNext, squares, onPlay }) {
     function handleClick(i) {
         if (calculateWinner(squares) || squares[i]) {
+            onPlay(Array(9).fill(null));
             return;
         }
         const nextSquares = squares.slice();
