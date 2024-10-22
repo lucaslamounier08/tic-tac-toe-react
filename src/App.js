@@ -1,6 +1,7 @@
-import './App.css';
-import Board from './components/Board.js';
+import Game from './components/Game';
 
-export default function app() {
-  return Board.apply(this, arguments);
+function App() {
+  return <Game />;
 }
+
+export default App;
